@@ -621,7 +621,7 @@ const LoveLetterSection = () => {
           </p>
           
           <p className="text-cosmic-pink italic">
-            "I loved you before I knew your name, and I'll love you long after 
+            "I loved you even before I met , and I'll love you long after 
             the stars have burned out."
           </p>
           
