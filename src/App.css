@@ -1,0 +1,160 @@
+/* Additional App Styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure full viewport coverage */
+#root {
+  min-height: 100vh;
+}
+
+/* Custom cursor for romantic feel */
+@media (hover: hover) {
+  body {
+    cursor: default;
+  }
+  
+  a, button {
+    cursor: pointer;
+  }
+}
+
+/* Enhanced glass morphism */
+.glass {
+  background: rgba(26, 26, 62, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Enhanced countdown styling */
+.countdown-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.countdown-item:hover::before {
+  left: 100%;
+}
+
+/* Image hover enhancement */
+.image-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 215, 0, 0.1) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.image-hover:hover::after {
+  transform: translateX(100%);
+}
+
+/* Button ripple effect */
+.btn-romantic {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-romantic::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-romantic:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Letter styling enhancements */
+.love-letter {
+  position: relative;
+}
+
+.love-letter p {
+  text-indent: 1.5em;
+}
+
+.love-letter p:first-of-type,
+.love-letter p:last-of-type {
+  text-indent: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .font-script {
+    line-height: 1.2;
+  }
+  
+  .countdown-item {
+    padding: 1rem;
+  }
+  
+  .countdown-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .starfield,
+  .floating-hearts {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}
